@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Geist:wght@100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #304384;
+  --font-archivo: "Archivo", sans-serif;
+  --color-surface: #EEEEEE;
+  --color-primary-hover: #3E63DD;
+  --color-border: #6E6E6E;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 24px;
+}
