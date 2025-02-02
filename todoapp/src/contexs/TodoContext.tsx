@@ -17,7 +17,7 @@ type TodoContextType = {
 export const TodoContext = createContext<TodoContextType | undefined>(undefined);
 
 // Provider
-const TodoProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const TodoProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
 
     const [todos, setTodos] = React.useState<Todo[]>([]);
 

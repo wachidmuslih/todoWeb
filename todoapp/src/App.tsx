@@ -1,17 +1,18 @@
-import { useState } from 'react'
 import './App.css'
-import TodoInput from './components/todoInput'
+import TodoForm from './components/TodoForm'
 import TodoList from './components/TodoList'
+import { TodoProvider } from './contexs/TodoContext'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div className="flex flex-col justify-center gap-y-4 items-center h-screen">
-        <TodoInput />
-        <TodoList />
-      </div>
+      <TodoProvider>
+        <div className="flex flex-col justify-center items-center max-w-md  my-auto mx-auto mt-10 p-4">
+          <TodoForm />
+          <TodoList />
+        </div>
+      </TodoProvider>
     </>
   )
 }

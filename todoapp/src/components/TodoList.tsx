@@ -1,30 +1,25 @@
-import { IconTrash } from "@tabler/icons-react"
+import React, { useMemo } from "react";
+import { useTodoContext } from "../contexs/TodoContext";
+import TodoItem from "./TodoItem";
 
-const TodoList = () => {
+
+const TodoList: React.FC = () => {
+    const { todos } = useTodoContext();
+
+    // Memoize todo list
+    const renderedTodos = useMemo(() => {
+        return todos.map((todo) => <TodoItem key={todo.id} todo={todo} />);
+    }, [todos]);
     return (
-        <div className="w-[400px]">
-            <h2 className="text-xl font-bold mb-4 text-gray-800">Daftar Todo</h2>
-            <ul className="flex flex-col gap-y-2 font-archivo font-normal text-gray-800 text-base">
-                <li className="flex justify-between p-4 bg-gray-50 border-[1px] border-[#EEEEEE] border-solid rounded-lg hover:bg-gray-100 ">
-                    <span className="mr-2">Ini catatan yoyiggiyo</span>
-                    <button className="text-red-500 flex items-center gap-x-2">
-                        <IconTrash size={20} color="#fb2c36" />
-                        {/* <span>Hapus</span> */}
-                    </button>
-                </li>
-                <li className="flex justify-between p-4 bg-gray-50 border-[1px] border-[#EEEEEE] border-solid rounded-lg hover:bg-gray-100 ">
-                    <span className="mr-2">Ini catatan yoyiggiyo</span>
-                    <button className="text-red-500 flex items-center gap-x-2">
-                        <IconTrash size={20} color="#fb2c36" />
-                        {/* <span>Hapus</span> */}
-                    </button>
-                </li>
-                
-            </ul>
-            
-
+        <div>
+            <div className="text-center text-2xl font-bold text-gray-800 mb-4">Todo List</div>
+            <div className="flex flex-col gap-4">
+                {todos.length ? renderedTodos : <div className="text-center text-gray-400">No todos</div>}
+            </div>
         </div>
-    )
-}
+    );
+};
 
-export default TodoList
+
+    
+export default TodoList;
