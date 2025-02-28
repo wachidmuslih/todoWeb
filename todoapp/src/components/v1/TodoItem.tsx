@@ -1,5 +1,5 @@
 import React from 'react'
-import { Todo, useTodoContext } from '../contexs/TodoContext'
+import { Todo, useTodoContext } from '../../contexs/TodoContext'
 import { IconTrash } from '@tabler/icons-react';
 
 interface TodoItemProps {

@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router'
-import TodoForm from '../components/TodoForm'
-import TodoList from '../components/TodoList'
+import TodoForm from '../components/v1/TodoForm'
+import TodoList from '../components/v1/TodoList'
 import { TodoProvider } from '../contexs/TodoContext'
 
 
