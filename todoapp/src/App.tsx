@@ -1,11 +1,13 @@
 import './App.css'
-import TodoVersion1 from './pages/TodoVersion1'
 
 function App() {
 
   return (
     <>
-      <TodoVersion1 />
+      <div>
+        <h1>Welcome to My App</h1>
+        <p>This is a global layout or shared UI.</p>
+      </div>
     </>
   )
 }
