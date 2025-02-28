@@ -10,7 +10,7 @@ function TodoVersion2() {
         <NotesProvider>
             <div className="max-w-md mx-auto mt-10 p-5 bg-gray-100 rounded-lg shadow-md">
                 <h1 className="text-2xl font-bold text-center">📝 Notes App</h1>
-                <NoteForm editingNote={editingNote} setEditingNote={setEditingNote} />
+                <NoteForm editingNote={editingNote} setEditingNote={setEditingNote}/>
                 <NoteList setEditingNote={setEditingNote} />
             </div>
         </NotesProvider>

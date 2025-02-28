@@ -4,7 +4,7 @@ const NoteList = ({ setEditingNote }: { setEditingNote: any }) => {
     const { notes, deleteNote, toggleDone } = useNotes();
 
     return (
-        <ul>
+        <ul className="mt-4">
             {notes.map((note) => (
                 <li
                     key={note.id}
